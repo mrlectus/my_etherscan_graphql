@@ -7,11 +7,21 @@ require("dotenv").config();
 
 const resolvers = {
   Query: {
-    getEthByAddress: (root, _args, { dataSources }) =>
+    // Query to get ether balance by address
+    etherBalanceByAddress: (root, _args, { dataSources }) =>
       dataSources.ethDataSource.etherBalanceByAddress(),
-    getTotalSupplyEth: (root, _args, { dataSources }) =>
+
+    // Query to get total supply of ether
+    totalSupplyOfEther: (root, _args, { dataSources }) =>
       dataSources.ethDataSource.totalSupplyOfEther(),
-    //Paste Code for New Resolver Functions
+
+    // Query to get latest ethereum price
+    latestEthereumPrice: (root, _args, { dataSources }) =>
+      dataSources.ethDataSource.getLatestEthereumPrice(),
+
+    // Query to get block confirmation time
+    blockConfirmationTime: (root, _args, { dataSources }) =>
+      dataSources.ethDataSource.getBlockConfirmationTime(),
   },
 };
 
