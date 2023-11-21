@@ -1,8 +1,8 @@
 type Query {
-  getEthByAddress: ETH_RESULT!
-  getTotalSupplyEth: ETH_RESULT!
-  getEthPrice: ETH_PRICE!
-  getEstimationTimePerTransaction: ETH_RESULT!
+  etherBalanceByAddress: ETH_RESULT!
+  totalSupplyOfEther: ETH_RESULT!
+  latestEthereumPrice: ETH_PRICE!
+  blockConfirmationTime: ETH_RESULT!
 }
 
 """
